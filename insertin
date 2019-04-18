@@ -1,0 +1,5 @@
+my_sql_connect('localhost','mysql_user','mysql_password');
+
+mysql_select_db('callcenter');
+
+mysql_query(INSERT INTO insert_data(caller,channel,operator,Circle) VALUES ( ('".mysql_real_escape_string($_GET['who'])."', '".mysql_real_escape_string($_GET['channel'])."', '".mysql_real_escape_string($_GET['operator'])."', '".mysql_real_escape_string($_GET['circle'])."' ) );
